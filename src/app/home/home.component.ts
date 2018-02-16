@@ -40,8 +40,8 @@ export class HomeComponent implements OnInit {
   constructor( private _data: DataService) { }
 
   ngOnInit() {
-   this.itemCount = this.goals.length;
    this._data.goal.subscribe(res => this.goal = res);
+   this.itemCount = this.goals.length;
    this._data.changeGoal(this.goals);
   }
 
